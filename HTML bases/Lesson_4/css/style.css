@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/bg.jpg');
+    font: 700 16px/27px 'Dancing Script', 'cursive';
+}
+
+.container {
+    background-color: white;
+    max-width: 600px;
+    width: 90%;
+    margin: 40px auto;
+    box-shadow: 0 0 30px #03a9f4;
+    /* border-width: 10px;
+    border-style: solid;
+    border-color: green; */
+    /* border-left: 10px solid green;
+    border-right: 10px solid red; */
+}
+
+.container .header-image {
+    background: url('../images/header.jpg') top;
+    height: 200px;
+}
+
+.container .content {
+    padding: 20px;
+}
+
+.container.container2 .header-image {
+    background: url('../images/space.jpg');
+}
+
+.container .content h2 {
+    color: seagreen;
+}
+
+.container .content p {
+    color: indigo;
+}
+
+.container .content .link {
+    margin: 16px 0 0 0;
+}
+
+.container .content .link a {
+    background: rgb(251 198 80);
+    color: black;
+    padding: 5px 10px;
+    display: inline-block;
+    text-decoration: none;
+}
