@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+P+One&display=swap');
+html {
+    height: 100%;
+}
+
+body {
+    /* background-color: tan;
+    background-color: #D2B48C;
+    background-color: rgb(210, 180, 140);
+    background-color: rgba(210, 180, 140, 1)
+    background-color: hsl(34, 44%, 69%) */
+    /* background-size: cover; - a háttérkép mindig kitölti a teljes hátteret azonban megtörténhet az, hogy valamely része levágásra kerül az ablak méretének csökkentése közben. */
+    /* background-size: contain; - Ebben az esetben nem lesz levágva egyetlen része sem a háttér képnek. */
+
+    /* background-image: url('../images/bg.jpg');
+    background-color: tan;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;*/
+    
+    /* Shorthand módszer */
+    /* background: url('../images/bg.jpg') green no-repeat center fixed; */
+    background: url('../images/bg.jpg') green repeat center fixed;
+    color: white;
+    /* font-size: 20px;
+    font-style: italic;
+    line-height: 25px;
+    font-family: Verdana, Helvetica, sans-serif; */
+
+    /* Shorthand módszer */
+    /* font: italic 20px/27px Verdana, sans-serif; */
+    font: 20px/27px 'Mochiy Pop P One', sans-serif;
+}
