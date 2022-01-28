@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <title>Táblázatok</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <!-- Csak a láthatóság kedvéért használjuk a border="1"-et a table paramétereként. Táblázatot formázni HTML5-ben már csak CSS-ben szabad.
+
+    caption - táblázat neve
+    colgroup - táblázat oszlopainak a formázására szolgál. A tag-en belül annyi col-t kell létrehozni, amennyi oszlop van! Azonban CSS-ből is megvalósítható az oszlop formázás ezért nem használják ezt a megoldást.
+
+    Megjegyzés:
+        col - oszlopok formázására szolgál,
+        tr - sorok formázásánál használjuk
+
+    A valóságban szinte soha nem használják a thead, tbody és tfoot tag-eket, a colgroup-ot és caption-t pedig nagyon ritkán. -->
+<table border="1">
+    <caption>Autók</caption>
+    <colgroup>
+        <col>
+        <col>
+        <col>
+        <col><!-- <col style="background-color: aquamarine;"> -->
+    </colgroup>
+    <thead>
+        <tr>
+            <th>Sorszám</th>
+            <th>Márka</th>
+            <th>Gyártó ország</th>
+            <th>Alapítva</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Cadilac</td>
+            <td rowspan="3">USA</td>
+            <td>1903</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Chevrolet</td>
+            <td>1911</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Dodge</td>
+            <td>1901</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Jaguar</td>
+            <td>Anglia</td>
+            <td>1922</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Acura</td>
+            <td rowspan="3">Japán</td>
+            <td>1986</td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Honda</td>
+            <td>1948</td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Lexus</td>
+            <td>1989</td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Audi</td>
+            <td rowspan="2">Németország</td>
+            <td>1909</td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>BMW</td>
+            <td>1929</td>
+        </tr>
+        <tr>
+            <td>10</td>
+            <td>Maserati</td>
+            <td>Olaszország</td>
+            <td>1914</td>
+        </tr>
+        <tr>
+            <td>11</td>
+            <td>Bugatti</td>
+            <td>Franciaország</td>
+            <td>1998</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Gyakorló táblázat</td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>
