@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html lang="hu">
+<head>
+    <title>Első weboldalam</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<!-- <body style="background-color: rgb(206, 197, 197);"> -->
+<!-- Egy weboldal készítésénél fontos, hogy szemantikus markup-ra törekedjünk! -->
+<body>
+<div>    
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br>
+        <u>Nam quis leo neque.</u>
+        <i>Nam viverra</i>
+        <b>id diam vel posuere.</b> id
+        <strong>auctor enim,</strong> quis commodo
+        <small>malesuada ac magna ultrices feugiat.</small> Quisque
+        <s>magna nisl</s>,
+        <sup>id fermentum vitae</sup>,
+        <sub>eu lectus</sub>.
+        <mark>Fusce id augue efficitur</mark>, sollicitudin dolor ac, cursus metus.
+        <del>Suspendisse</del> <ins>vehicula</ins> tortor et diam dictum fringilla. Pellentesque euismod egestas nisi sed sagittis. Pellentesque egestas arcu ut est feugiat efficitur. Sed et dapibus est. Vestibulum risus nulla, ullamcorper vitae efficitur fringilla, rutrum lacinia magna. Donec arcu tellus, venenatis quis condimentum vel, ullamcorper at dolor.</p>
+    <blockquote cite="http://www.worldwildlife.org/who/index.html">Interdum et malesuada fames ac ante ipsum primis in faucibus.</blockquote>
+    <hr>
+    <p>
+        <abbr title="Hypertext Markup Language">HTML</abbr>
+    </p>
+    <h1>1. címsor</h1>
+    <h2>2. címsor</h2>
+    <h3>3. címsor</h3>
+    <h4>4. címsor</h4>
+    <h5>5. címsor</h5>
+    <h6>6. címsor</h6>
+
+    <h1>Ritkán használt tag-ek</h1>
+    <em>Emphasized text</em><br>
+    <strong>Strong  text</strong><br>
+    <code>console.log('A piece of computer code')</code><br>
+    <samp>Sample output from a computer program</samp><br>
+    <kbd>Keyboard input</kbd><br>
+    <var>Variable</var><br>
+    <hr>
+    Ma reggel <time datetime="2022-01-25 07:30">korán</time> keltem.
+    
+    <h1>Lista</h1>
+    <!--dl - description list
+        dt - description term
+        dd - description details -->
+    <dl>
+        <dt>Kalapács</dt>
+        <dd>A kalapács mindig kézné van.</dd>
+        <dt>Csavar</dt>
+        <dd>Elemek rögzitésére szolgál.</dd>
+    </dl>
+    
+    <h1>Felsorolás</h1>
+    <!--ol - ordered list (rendezet)
+        li - list item
+        ul - unordered list -->
+    <ol type="i">
+        <li>Piros</li>
+        <li>Kék</li>
+        <li>Sárga</li>
+        <li>Zöld</li>
+        <li>Lila</li>
+    </ol>
+    <ul>
+        <li>Piros</li>
+        <li>Kék</li>
+        <li>Sárga</li>
+    </ul>
+    Link egy oldalra: <a href="https://www.youtube.com/" target="_blank">YouTube</a><br>
+    Link egy e-mail címre: <a href="mailto:nev@mail_nev.hu" target="_blank">YouTube</a>
+    <figure>
+        <img src="images/bg-3.jpg" alt="Ingatlan értékesítés">
+        <figcaption>Ide kerül a kép címe</figcaption>
+    </figure>
+    
+    <h1>Layout tag-ek</h1>
+    <main>
+        <strong>main:</strong> A weboldal tényleges tartalma. Csak egy darab lehet belőle. Egyedi tartalommal kell rendelkeznie.
+    </main>
+    <nav>
+        <strong>nav:</strong> Navigációs elemek helye.
+    </nav>
+    <article>
+        <strong>article:</strong> Blog, fórum bejegyzések vagy a komment szekció ide kerül.
+    </article>
+    <aside>
+        <strong>aside:</strong> A tartalomhoz kapcsolódó szöveg megjelölésére szolgál. Pl:
+    </aside>
+    <p>Budapesten jártam!</p>
+    <aside>Budapest Magyarország fővárosa.</aside>
+    <footer>
+        <strong>footer:</strong> Láblécet jelölünk vele.
+    </footer>
+    <header>
+        <strong>header:</strong> Fejlécet jelölünk vele.
+    </header>
+    <div>
+        <strong>div:</strong> A weboldal tartalmán belül block-okat hozhatunk létre vele. Nincs semmilyen szemantikus jelentése.
+    </div>
+
+    <h1>Űrlapok</h1>
+    <form method="post">
+        <!-- fieldset - űrlapelemek csoportosítására szolgál -->
+        <fieldset>
+            <legend>Cím</legend>
+            <ul>
+                <li><b>Input</b>
+                    <ul>
+                        <li>
+                            <input type="text" placeholder="text">
+                        </li>
+                        <li>
+                            <input type="email" placeholder="e-mail">
+                        </li>
+                        <li>
+                            <input type="password" placeholder="password">
+                        </li>
+                        <li>
+                            <label for="tel">Telefonszám</label>
+                            <input type="tel" placeholder="tel" id="tel">
+                        </li>
+                        <li>
+                            <input type="file">
+                        </li>
+                        <li>
+                            <!-- A label-el összetudjuk kapcsolni az input elemeket a hozzájuk tartozó felirattal! -->
+                            <label for="date">Dátum</label>
+                            <input type="checkbox" id="date">
+                        </li>
+                        <li>
+                            <!-- Az űrlap feldolgozás során kell beállítani a 'value' értékét. Ez lesz az értéke ennek a radio button-nek-->
+                        <label for="alma">Alma</label> <input type="radio" name="gyumolcs" id="alma" value="alma"><br>
+                        <label for="narancs">Narancs</label> <input type="radio" name="gyumolcs" id="narancs"><br>
+                        <label for="banan">Banán</label> <input type="radio" name="gyumolcs" id="banan">
+                        </li>
+                        <li>
+                            Az input
+                            <input type="submit" value="Submit">
+                            gomb és a gomb 
+                            <button type="submit">Submit button</button>
+                            ugyan úgy működik.
+                        </li>
+                    </ul>
+                </li>
+                
+                <li><b>Select</b>
+                    <ul>
+                        <li>
+                            <select name="szin" id="szin">
+                                <option>piros</option>
+                                <option>sárga</option>
+                                <option>lila</option>
+                                <option>zöld</option>
+                                <option>kek</option>
+                            </select>
+                        </li>
+                        <li>
+                            <select>
+                                <optgroup label="Japán autók">
+                                    <option>Mazda</option>
+                                    <option>Honda</option>
+                                    <option>Toyota</option>
+                                </optgroup>
+                                <optgroup label="Német autók">
+                                    <option>Audi</option>
+                                    <option>Mercedes</option>
+                                </optgroup>
+                            </select>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Text area</b>
+                    <ul>
+                        <li>
+                            <textarea></textarea>
+                        </li>
+                    </ul>
+                </li>
+                <li><b>Progress bar</b>
+                    <ul>
+                        <li>
+                            <progress value="30" max="100"></progress>
+                        </li>
+                    </ul>
+                </li>   
+                <li><b>Gomb</b>
+                    <ul>
+                        <li>
+                            <button>Küldés</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+
+    <hr>
+    <p>
+        Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam in mollis purus. Vestibulum imperdiet felis ac ornare maximus.
+        Integer at nulla dolor. Proin molestie, enim at facilisis finibus, ipsum enim ornare elit, vel dapibus est urna quis nisl. Nulla leo arcu, volutpat dictum finibus ut, malesuada eget elit. Sed erat sapien, iaculis ut augue quis, porta feugiat libero. Vestibulum in lobortis lorem. Vivamus a tellus eleifend, tincidunt tortor ac, volutpat turpis. Nunc sed urna sed felis scelerisque varius. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean mattis lorem et orci faucibus accumsan. Duis varius rutrum orci nec imperdiet. Vivamus aliquam tortor sed ornare dictum.</p>
+    <p>
+        Integer vel metus at quam vestibulum fermentum. Pellentesque dapibus facilisis urna eget mollis. Praesent sagittis aliquam urna, quis lacinia augue dignissim sed. Fusce nec purus sed magna hendrerit tempus. Phasellus eleifend diam in congue rutrum. Nunc et scelerisque neque, nec finibus velit. Cras sed viverra tortor. Donec dictum dapibus lectus id porta. Pellentesque sit amet semper orci. Duis id metus mauris.</p>
+    <p>Maecenas turpis velit, aliquam sit amet tortor eget, iaculis pulvinar mi. Ut varius, nisi quis faucibus tempor, purus augue commodo dui, a mollis felis lacus vel nibh. Nullam at lobortis diam. Donec eu nisl sagittis, lacinia enim et, tempor nibh. Aenean vestibulum placerat varius. Morbi ligula lacus, feugiat vitae facilisis non, ultricies eget metus. Duis vestibulum enim sed nunc euismod fringilla. Praesent urna purus, eleifend vitae fermentum ac, tincidunt at sem. Praesent lacinia cursus ex.</p>
+    <p>
+        Praesent suscipit ex eu arcu dignissim pretium. Nullam ac tempus libero, non rhoncus nisl. Aliquam fermentum nisl vitae aliquam tincidunt. Quisque ornare lacinia justo, quis ornare neque. Vivamus tortor risus, imperdiet sit amet odio eget, placerat varius orci. Nullam euismod at orci a posuere. Mauris lectus neque, mattis eu tristique vitae, semper non neque. Nunc tempus lectus mi, id sodales augue commodo id. Cras a augue ultricies, tempus tortor et, molestie nisi. Nam tempor tincidunt convallis. Phasellus orci tellus, tempor ac molestie in, malesuada quis sem. Etiam sagittis sed lacus sed tincidunt. Fusce condimentum iaculis neque at suscipit. Aenean luctus ultrices porta. Pellentesque ullamcorper tempus volutpat.</p>
+    <p>
+        Aliquam sed mollis odio. In venenatis eget lacus et pellentesque. Suspendisse at sapien justo. Cras accumsan sed metus eu feugiat. Cras egestas faucibus scelerisque. Nullam ac turpis erat. Etiam sed dui non dolor lacinia tempus eu nec tortor. Aenean ut lacus pulvinar, viverra mi nec, rhoncus orci. Aenean id odio sit amet tortor aliquet rhoncus accumsan in neque. Fusce a eleifend metus. Proin pretium elit nec eros semper, vel consequat nisi dapibus. Pellentesque pulvinar turpis dolor, id pharetra enim aliquet et. Praesent ultrices eros sem, ut semper enim scelerisque eget. Nulla facilisi. Proin elit sem, faucibus sit amet tellus nec, ultrices porttitor ipsum.</p>
+</div>
+</body>
+</html>
