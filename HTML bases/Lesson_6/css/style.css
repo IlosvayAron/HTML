@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: url('../images/bg-body.jpg') no-repeat;
+    background-size: cover;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.wrapper {
+    max-width: 800px;
+    margin: 40px auto;
+    box-shadow: 0 0 200px rgba(255,255,255,.4);
+}
+
+header {
+    background: url('../images/bg-header.jpg') top;
+    height: 360px;
+}
+
+nav {
+    background: rgba(190,0,0,.8);
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    /*A left és right: 0 értékkel érjük el azt, hogy a navigációs mező teljes szélességű legyen.*/
+}
+
+nav::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+}
+
+nav a:hover {
+    background: rgba(0,0,0,.8);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 ;
+}
+
+nav>ul>li {
+    float: left;
+}
+
+nav .has-submenu {
+    position: relative;
+}
+
+nav .has-submenu:hover .submenu{
+    display: block;
+}
+
+/* pseudo element selector - ex. ::after */
+nav .has-submenu::after {
+    content: '🢓';
+    color: white;
+    position: absolute;
+    top: 26px;
+    right: 15px;
+}
+
+nav .has-submenu>a {
+    padding-right: 35px;
+}
+
+nav .submenu {
+    position: absolute;
+    width: 150px;
+    display: none;
+}
+
+nav .submenu a {
+    background: rgba(190,0,0,.9);
+    padding: 15px 20px;
+}
+
+nav .submenu a:hover {
+    background: rgba(0,0,0,.9);
+}
+
+main {
+    background: rgba(255,255,255,1);
+    padding: 40px;
+}
+
+main h1 {
+    margin-top: 0;
+}
+
+main p {
+    line-height: 1.5;
+}
+
+.cookie-accept {
+    padding: 20px;
+    background-color: rgba(0,0,0,.9);
+    color: rgba(255,255,255,1);
+    position: sticky;
+    bottom: 0;
+}
+
+.cookie-accept h2 {
+    margin-top: 0;
+}
+
+.cookie-accept p {
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+
+.cookie-accept button {
+    background: skyblue;
+    border: none;
+    border-radius: 5%;
+    padding: 5px;
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+.cookie-accept button:hover {
+    background: rgba(61,125,151,1);
+    color: white;
+}
