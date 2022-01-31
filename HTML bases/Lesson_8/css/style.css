@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('../images/bg-body.jpg') fixed;
+    background-size: cover;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.grid-1{
+    display: grid;
+    max-width: 1000px;
+    margin: 40px auto;
+    grid-template-columns: repeat(12, 1fr); /*oszlopok számának a meghatározása*/
+    row-gap: 10px; /*két sor közötti tér mérete*/
+    column-gap: 10px; /*két oszlop közötti tér mérete*/
+    /* gap: 10px 10px; - (row column) shorthand way for previous two*/
+}
+
+.col {
+    background: white;
+    padding: 10px;
+}
+
+.grid-1 .col-2 {
+    grid-column: span 2;
+}
+
+.grid-1 .col-3 {
+    grid-column: span 3;
+}
+
+.grid-1 .col-4 {
+    grid-column: span 4;
+}
+
+.grid-1 .col-6 {
+    /* Megadjuk, hogy egy cella hány oszlopot foglaljon el */
+    grid-column-start: 1;
+    grid-column-end: 7;
+    grid-column: span 6; /*shordhand way for previous two*/
+}
+
+.grid-1 .col-12 {
+    grid-column: span 12;
+}
+
+.grid-2{
+    display: grid;
+    max-width: 1000px;
+    margin: 40px auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-template-areas: 
+        "header header header header"
+        "main main . sidebar"
+        "footer footer footer footer";
+}
+
+.grid-2 .header {
+    grid-area: header;
+}
+
+.grid-2 .main {
+    grid-area: main;
+}
+
+.grid-2 .sidebar {
+    grid-area: sidebar;
+}
+
+.grid-2 .footer {
+    grid-area: footer;
+}
+
+/* grid-template-columns: repeat(4, 1fr) 100px 200px auto; - akár változatos méreteket is használhatunk az oszlopok szélességéne a beállítására. Esetünkben egy 7 oszlopos rács táblázatunk van. */
+
+.grid-3{
+    max-width: 1000px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+}
+
+.grid-3 .col1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.grid-3 .col2 {
+    grid-column-start: 3;
+    grid-column-end: 6;
+}
+
+.grid-3 .col3 {
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4; */
+    grid-area: 2 / 1 / 4 / 3; /* grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+}
