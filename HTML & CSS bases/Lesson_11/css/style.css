@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;300;400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Work Sans', sans-serif;
+    background: linear-gradient(#fff,#a7a7a7);
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    height: 400px;
+    width: 600px;
+    background: url('../images/bg-box.png');
+    box-shadow: 0 0 100px rgba(255, 255, 255, .8);
+    position: relative;
+    overflow: hidden;
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    top: -87px;
+    color: #f0ff00;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, .4);
+    animation-name: title;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes title {
+    /* Ha nem állítom be 40%-ra az eredeti színeket akkor a 0%-tól kezdi el a számolást és 50%-ra már át lesz színezve, de így most nem jó. Esetemben azonban 40%-tól fogja elkezdeni az átszínezést. */
+    0% { top: -87px }
+    5% { top: 0; }
+    40% { background: rgba(0, 0, 0, .4); color: #f0ff00;}
+    50% { background: #ff4e9c; color: #fff;}
+    95% { top: 0; }
+    100% { top: -93px; background: #ff4e9c; color: #fff;}
+}
+
+.shoe-1 {
+    width: 500px;
+    height: 200px;
+    background: url('../images/nike1.png');
+    position: absolute;
+    bottom: 50px;
+    left: -500px;
+    animation-name: shoe-1;
+    animation-duration: 5s;
+    /* animation-delay: 1s; */
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: 3; animáció lefutásának darabszáma */
+}
+
+@keyframes shoe-1 {
+    /* A % az animáció idejét mutatja */
+    0% { left: -500px;}
+    20%, 50% { left: 50px;}
+    100% { left: 600px;}
+}
+
+.shoe-2 {
+    width: 500px;
+    height: 200px;
+    background: url('../images/nike2.png');
+    position: absolute;
+    bottom: 50px;
+    left: -500px;
+    animation-name: shoe-2;
+    animation-duration: 5s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes shoe-2 {
+    0% { left: -500px;}
+    20%, 50% { left: 50px;}
+    100% { left: 600px;}
+}
+
+.buy {
+    font-size: 50px;
+    font-weight: 700;
+    background: rgba(0, 0, 0, .4);
+    color: #bfdf51;
+    position: absolute;
+     /* a top/left értékeket a content és a buy width/height értékeiből számoltam ki */
+    top: -90px;
+    left: 125px;
+    width: 350px;
+    height: 90px;
+    text-align: center;
+    padding: 10px 0;
+    /* animation-name: buy;
+    animation-duration: 5s;
+    animation-delay: 11s;
+    animation-fill-mode: forwards; */
+    /* shorthand way + more then one animation*/
+    /* name / duration / delay / fill-mode / iteration-count */
+    animation: buy 5s 11s forwards, pulse 2s 14s infinite;
+}
+
+@keyframes buy {
+    0% { top: -90px;}
+    50%, 100% { top: 155px;}
+}
+
+@keyframes pulse {
+    0% { background: rgba(0, 0, 0, .4); color: #bfdf51; }
+    50% { background: #bfdf51; color: #000; }
+}
